@@ -1,14 +1,14 @@
 #include <iostream>
-#include "binarySearch.cpp"
-
 using namespace std;
 
-int main(int argn, char** argv)
+#include "binarySearch.cpp"
+
+int main()
 {
     int testArray[] = {1,3,4,5,6,9,10,50,90,102}; // has to be sorted
-    int pos = binarySearch(90, testArray ,0 , sizeof(testArray));
+    int pos = binarySearch(4, testArray ,0 , sizeof(testArray)-1);
 
-    cout << "Found at " << pos << endl;
+    cout << "Found at " << pos << endl; // Prints out "Found at 2" if every worked correctly !
 
     return 0;
 }

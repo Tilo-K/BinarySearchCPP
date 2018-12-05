@@ -3,7 +3,11 @@
 */
 int binarySearch(int find, int* array, int min, int max)
 {
-    int mid = (max-min)/2; // The center of the indexies min & max
+    int mid = (max+min)/2; // The center of the indexies min & max
+    if(array[mid] == find)
+    {
+        return mid; // Found
+    }
     if(min == max)
     {
         if(find == array[min])
